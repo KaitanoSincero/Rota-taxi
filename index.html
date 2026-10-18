@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-AO"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://tile.openstreetmap.org https://cdnjs.cloudflare.com; connect-src 'self' https://*.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com; object-src 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://*.googleapis.com wss://*.firebaseio.com https://router.project-osrm.org https://nominatim.openstreetmap.org; frame-src https://*.firebaseapp.com; object-src 'none'; base-uri 'self'">
 <meta name="theme-color" content="#1550b8">
 <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png">
 <title>Rota Táxi</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 --bg:#f3f5f9;--sf:#fff;--tx:#0f1b33;--mu:#5b6678;--br:#d8dee9;--pri:#1550b8;--on:#fff;--ac:#ffc21a;--ok:#12805c;--wa:#b86e00;--er:#c0302b;--map:#e6ecf4}
@@ -46,8 +45,7 @@ input.f{width:100%;min-height:52px;font:inherit;font-size:1.05rem;margin:4px 0 1
 .err{color:var(--er);font-weight:600;margin:6px 0}
 </style></head><body>
 <header><div class="logo" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffc21a" stroke-width="2.4" stroke-linecap="round"><path d="M3 18c4-9 8-3 12-10l4 2"/><circle cx="19" cy="18" r="2" fill="#ffc21a"/></svg></div><h1>Rota Táxi</h1><span id="swap"></span></header>
-<div id="top"></div><div id="mapbox" hidden></div><main id="app"></main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<div id="top"></div><main id="app"></main>
 <script type="module" src="app.js"></script>
 <script>if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{})</script>
 </body></html>
